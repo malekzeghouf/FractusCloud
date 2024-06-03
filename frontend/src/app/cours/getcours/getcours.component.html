@@ -1,0 +1,41 @@
+<h5 class="card-title">Cours <span>| Affichage</span></h5>
+              <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                           
+                         
+                          
+                         
+                            <th> Date </th>
+                            <th> Description </th>
+                            <th> Categorie </th>
+                            <th> Duree </th>
+                            <th> Prix </th>
+                      
+                            <th> nb_participant </th>
+                            <th> </th>
+                          
+                        </tr>
+                    </thead>
+                    <tbody>
+                    
+                        <tr *ngFor="let cour of cours">
+                            <td> {{cour.date  | date:'yyyy-MM-dd'}} </td>
+                            <td> {{cour.description}} </td>
+                            <td> {{cour.categorie}} </td>
+                            <td> {{cour.duree}} </td>
+                            <td> {{cour.prix}} </td>
+                     
+                            <td> {{cour.nb_participant}} </td>
+                            <td>
+                                <button  routerLink="/update/{{cour.idCours}}" type="button" class="btn btn-outline-success">Update</button>
+                                <a (click)="deleteCours(cour.idCours)"><button class="btn btn-outline-danger">Delete</button></a>
+                            </td>
+                          
+                           
+                          
+                        </tr>
+                    </tbody>
+                </table>
+              </div>

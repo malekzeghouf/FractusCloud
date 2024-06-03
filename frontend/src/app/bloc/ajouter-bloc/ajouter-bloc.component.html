@@ -1,0 +1,32 @@
+<h5 class="card-title">Bloc <span>| Ajout</span></h5>
+<br>  
+
+<div class="mb-5">
+    <div class="row">
+      <div class="card-body" style="margin-left:50px;">
+        <form [formGroup]="postBlocForm">
+          <div class="row mb-3">
+            <div class="col-sm-10">
+              <select class="form-control p-6" formControlName="statut">
+                <option value="" disabled selected>Choisir le statut</option>
+                <option value="Activé">Activé</option>
+                <option value="Désactivé">Désactivé</option>
+                <option value="En Cours de Construction">En Cours de Construction</option>
+              </select>
+            </div>
+            <!--<div class="col-sm-10">
+              <input type="text" class="form-control p-2" name="statut" id="statut" placeholder="Statut" formControlName="statut">
+            </div>-->
+          </div>
+          <div class="row mb-3">
+            <div class="col-sm-10">
+              <input type="text" class="form-control p-2" name="titre" id="titre" placeholder="Titre" formControlName="titre">
+            </div>
+          </div>
+          <div class="text-center">
+            <input class="btn btn-primary" type="submit" (click)="postBloc()" value="Ajouter">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>

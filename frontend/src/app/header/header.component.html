@@ -1,0 +1,46 @@
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a style="margin-left:50px;" routerLink="/front" class="logo d-flex align-items-center">
+            <img src="assets/backOffice/img/logo1.png" alt="">
+          </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a routerLink="/front" class="nav-item nav-link active">Home</a>
+                <a href="#" class="nav-item nav-link">About</a>
+                <a routerLink="/front/ajouterRendezVousFront" class="nav-item nav-link">Rendez Vous</a>
+              <div class="nav-item dropdown">
+                <a  href="#ma-section" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Projets</a>
+                <div class="dropdown-menu fade-down m-0">
+                  <a routerLink="/front/front1" class="dropdown-item"> Projets</a>
+                  <a routerLink="/front/projetfront"  class="dropdown-item">Mes Projets</a>
+                </div>
+
+                </div>
+              <div class="nav-item dropdown">
+                <a  href="#ma-section" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Cours</a>
+                <div class="dropdown-menu fade-down m-0">
+                  <a routerLink="/front/frontCours" class="dropdown-item"> Cours</a>
+                  <a routerLink="/front/consomme"  class="dropdown-item">Mes Cours</a>
+
+                </div>
+              </div>
+                <div class="nav-item dropdown">
+                    <a  href="#ma-section" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Esprit</a>
+                    <div class="dropdown-menu fade-down m-0">
+                        <a routerLink="/front/afficherSalleFront" class="dropdown-item">Salle</a>
+                        <a routerLink="/front/afficherDocumentFront" class="dropdown-item">Documents</a>
+                    </div>
+                </div>
+                <a href="#" class="nav-item nav-link">Contact</a>
+                <a (click)="signOut()" class="btn btn-danger py-2 top-0 end-0">Logout</a>
+            </div>
+
+        </div>
+    </nav>
+
+

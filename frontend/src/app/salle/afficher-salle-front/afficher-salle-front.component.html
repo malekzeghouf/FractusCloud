@@ -1,0 +1,39 @@
+<div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+    <h6 class="section-title bg-white text-center text-danger px-3">Salle</h6>
+    <h1 class="mb-5">Available Classrooms</h1>
+</div>
+
+<div style="margin-left:250px;" class="row g-4">
+    <div *ngFor="let salle of salles" class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+        <br>
+        <div class="team-item bg-light">
+            <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+                <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                    <a class="btn btn-outline-secondary">{{ salle.bloc.titre }}</a>
+                </div>
+            </div>
+            <div class="text-center p-4">
+                <h5 class="mb-0"><b>Nom : </b>{{ salle.nom }}</h5>
+                <small></small>
+                <br>
+                <small><b>Etat : </b>{{ salle.disponibilite }} | <b>Capacite : </b>{{ salle.capacite }}</small>
+                <br><br>
+                <button [disabled]="salle.disponibilite === 'Réservée'" routerLink="/front/ajouterReservationFront/{{ salle.id }}" class="btn btn-danger btn-sm animated slideInLeft">Réserver</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br><br>
+
+<div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+    <h6 class="section-title bg-white text-center text-danger px-3">ESPRIT</h6>
+    <h1 class="mb-5">Available Blocs</h1>
+</div>
+
+<div class="row g-4">
+    <div style="margin-left:150px;">
+        <app-map></app-map>
+    </div>
+
+</div>

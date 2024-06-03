@@ -1,0 +1,29 @@
+<h5 class="card-title">Réservation <span>| Modifier</span></h5>
+<br>  
+
+<div class="mb-5">
+    <div class="row">
+      <div class="card-body" style="margin-left:50px;">
+        <form [formGroup]="updateReservationForm">
+          <div class="row mb-3">
+            <div class="col-sm-10">
+              <input type="date" class="form-control p-2" name="date" id="date" placeholder="Date" formControlName="date">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-sm-10">
+              <input type="text" class="form-control p-2" name="raison" id="raison" placeholder="Raison" formControlName="raison">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-sm-10">
+              <input type="number" class="form-control p-2" name="nbParticipant" id="nbParticipant" placeholder="Nombre des Participants" formControlName="nbParticipant">
+            </div>
+          </div>
+          <div class="text-center">
+            <input class="btn btn-primary" type="submit" (click)="updateReservation()" value="Modifier">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>

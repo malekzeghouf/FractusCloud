@@ -1,0 +1,39 @@
+<h5 class="card-title">Users <span>| Affichage</span></h5>
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+    <tr>
+
+
+
+
+      <th> Nom </th>
+      <th> Prenom </th>
+      <th> Role </th>
+      <th> </th>
+
+    </tr>
+    </thead>
+    <tbody>
+
+    <tr *ngFor="let user of users">
+      <td> {{user.nom}} </td>
+      <td> {{user.prenom}} </td>
+      <td> {{user.role}} </td>
+      <td>
+        <button class="update-button ml -3" routerLink="/updateUser/{{user.id}}" type="button" class="btn btn-outline-success" style="padding-right: 10px;">Update</button>
+
+        &nbsp;
+        <button class="delete-button ml -3" (click)="deleteUser(user.id)"  class="btn btn-outline-danger" style="padding-left: 10px">Delete</button>
+        &nbsp;
+        <button class="banner-button" (click)="toggleBan(user)" class="btn btn-outline-primary" style="margin-left: 5px;">
+          {{ user.banni ? 'Débanner' : 'Banner' }}
+        </button>
+      </td>
+
+
+
+    </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,31 @@
+<div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+    <h6 class="section-title bg-white text-center text-danger px-3">Reservation</h6>
+    <h1 class="mb-5">Add Reservation</h1>
+</div>
+
+<div style="padding-left:150px;"class="row g-4">
+    <div class="row" >
+      <div class="card-body">
+        <form [formGroup]="postReservationForm">
+          <div class="row mb-3">
+            <div class="col-sm-10">
+              <input type="date" class="form-control p-2" name="date" id="date" placeholder="Date" formControlName="date">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-sm-10">
+              <input type="text" class="form-control p-2" name="raison" id="raison" placeholder="Raison" formControlName="raison">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-sm-10">
+              <input type="number" class="form-control p-2" name="nbParticipant" id="nbParticipant" placeholder="Nombre des Participants" formControlName="nbParticipant">
+            </div>
+          </div>
+          <div style="padding-right:200px;" class="text-center">
+            <input class="btn btn-primary" type="submit" (click)="postReservation()" value="Réserver">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>

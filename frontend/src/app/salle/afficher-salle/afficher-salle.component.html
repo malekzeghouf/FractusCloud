@@ -1,0 +1,37 @@
+<h5 class="card-title">Salles <span>| Affichage</span></h5>
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th> Capacité </th>
+                <th> Disponibilité </th>
+                <th> Nom </th>
+                <th> Bloc </th>
+                <th>    </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let salle of salles">
+                <td> {{ salle.capacite }} </td>
+                <td>
+                    <span class="badge" [ngClass]="{
+                        'bg-success': salle.disponibilite === 'Disponible',
+                        'bg-danger': salle.disponibilite === 'Réservée',
+                        'bg-warning': salle.disponibilite !== 'Disponible' && salle.disponibilite !== 'Réservée'
+                      }">
+                        {{ salle.disponibilite }}
+                    </span>
+                </td>
+                <td> {{ salle.nom }} </td>
+                <td> {{ salle.bloc?.titre }} </td>
+                <td>
+                    <button class="btn btn-outline-success btn-sm" routerLink="/dashboard/modifierSalle/{{salle.id}}">Modifier</button>
+                    &nbsp;
+                    <a (click)="deleteSalle(salle.id)"><button class="btn btn-outline-danger btn-sm">Supprimer</button></a>
+                    &nbsp;
+                    <button [disabled]="salle.disponibilite === 'Réservée'" class="btn btn-outline-dark btn-sm" routerLink="/dashboard/ajouterReservation/{{salle.id}}">Réserver</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

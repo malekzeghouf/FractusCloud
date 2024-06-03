@@ -1,0 +1,24 @@
+<h5 class="card-title">Bloc <span>| Modifier</span></h5>
+<br>  
+
+<div class="mb-5">
+    <div class="row">
+      <div class="card-body" style="margin-left:50px;">
+        <form [formGroup]="updateBlocForm">
+          <div class="row mb-3">
+            <div class="col-sm-10">
+              <input type="text" class="form-control p-2" name="statut" id="statut" placeholder="Statut" formControlName="statut">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-sm-10">
+              <input type="text" class="form-control p-2" name="titre" id="titre" placeholder="Titre" formControlName="titre">
+            </div>
+          </div>
+          <div class="text-center">
+            <input class="btn btn-primary" type="submit" (click)="updateBloc()" value="Modifier">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
