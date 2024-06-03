@@ -1,0 +1,33 @@
+<h5 class="card-title">Cours <span>| Ajout</span></h5>
+<br>  
+
+<div class="mb-5" >
+    <div class="row">
+      <div class="card-body" style="margin-left:50px;">
+        <form method="POST" [formGroup]="validateForm">
+         
+          
+    
+          <div class="row mb-3">
+            <div class="col-sm-10">
+              <input type="date" class="form-control p-2" name="date" id="date" formControlName="date">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-sm-10">
+              <textarea type="text" class="form-control p-2" name="description" id="description" placeholder="description" formControlName="description"></textarea>
+            </div>
+            <br>
+          </div>
+          <div class="row mb-3">
+            <div class="col-sm-10">
+              <input type="text" class="form-control p-2" name="nom" id="nom" placeholder="Nom" formControlName="nom">
+            </div>
+          </div>
+          <div class="text-center">
+            <input (click)="postCour()" class="btn btn-primary" type="submit" name="ajout" value="Ajouter">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
